@@ -3,7 +3,8 @@ JAVAC=javac
 JAVA=java
 JAR=jar
 CXX=c++
-INCLUDE=/usr/lib/jvm/java-7-openjdk-amd64/include
+#INCLUDE=/usr/lib/jvm/java-7-openjdk-amd64/include
+INCLUDE=/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/JavaVM.framework//Versions/A/Headers/
 
 PACKAGE=org/chasen/crfpp
 

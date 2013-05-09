@@ -1,12 +1,32 @@
 import org.chasen.crfpp.Tagger;
+import java.lang.UnsatisfiedLinkError;
 
 public class test {
 
 public static void main(String[] argv) {
-  Tagger tagger = new Tagger("-m ../model -v 3 -n2");
+	System.out.println("in main, starting");
+  Tagger tagger = null;
+  try {
+    //System.loadLibrary("CRFPP");
+    //System.loadLibrary("crfpp");
+  	tagger = new Tagger("-m ../model -v 3 -n2");
+	}
+	catch (UnsatisfiedLinkError e) {
+		System.out.println("error: couldn't load tagger jni stuff: \n" + e);
+		System.exit(-1);
+	}
+	catch (Exception x) {
+		System.out.println("exception:" + x);
+	}
+	catch (Error x) {
+		System.out.println("error:" + x);
+	}
+
+	System.out.println("tagger loaded");
   // clear internal context
   tagger.clear();
 
+	System.out.println("tagger cleared");
   // add context
   tagger.add("Confidence NN");
   tagger.add("in IN");
@@ -70,9 +90,11 @@ public static void main(String[] argv) {
 
 static {
   try {
+	System.out.println("in static before load");
     System.loadLibrary("CRFPP");
+	System.out.println("in static after load");
   } catch (UnsatisfiedLinkError e) {
-    System.err.println("Cannot load the example native code.\nMake sure your LD_LIBRARY_PATH contains \'.\'\n" + e);
+    System.err.println("Test: Cannot load the example native code.\nMake sure your LD_LIBRARY_PATH contains \'.\'\n" + e);
     System.exit(1);
   }
 }

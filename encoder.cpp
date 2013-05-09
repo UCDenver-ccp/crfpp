@@ -332,8 +332,12 @@ bool Encoder::learn(const char *templfile,
 
 #define WHAT_ERROR(msg) do {                                    \
     for (std::vector<TaggerImpl *>::iterator it = x.begin();    \
-         it != x.end(); ++it)                                   \
-      delete *it;                                               \
+         it != x.end(); ++it)  {                                \
+         if (*it != NULL) {                                     \
+             delete *it;                                        \
+	         *it = 0;                                           \
+		 }                                                      \
+    }                                                           \
     std::cerr << msg << std::endl;                              \
     return false; } while (0)
 
@@ -387,6 +391,7 @@ bool Encoder::learn(const char *templfile,
   std::cout << "C:                   " << C << std::endl;
   std::cout << "shrinking size:      " << shrinking_size
             << std::endl;
+  std::cout << "algorithm is " << algorithm << std::endl;
 
   progress_timer pg;
 
@@ -411,9 +416,14 @@ bool Encoder::learn(const char *templfile,
       break;
   }
 
+  std::cout << "done running algorithm" << std::endl;
+
   for (std::vector<TaggerImpl *>::iterator it = x.begin();
        it != x.end(); ++it) {
-    delete *it;
+       if (*it != NULL) {                                     
+           delete *it;
+	       *it = 0;
+       }
   }
 
   if (!feature_index.save(modelfile, textmodelfile)) {

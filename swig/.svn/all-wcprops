@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 27
+/svn/!svn/ver/22/trunk/swig
+END
+version.h.in
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2/trunk/swig/version.h.in
+END
+CRFPP.i
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/22/trunk/swig/CRFPP.i
+END
+CRFPP_wrap.c
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2/trunk/swig/CRFPP_wrap.c
+END
+version.h
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/21/trunk/swig/version.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/2/trunk/swig/Makefile
+END

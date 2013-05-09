@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 27
+/svn/!svn/ver/26/trunk/perl
+END
+CRFPP_wrap.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/26/trunk/perl/CRFPP_wrap.cxx
+END
+CRFPP.pm
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/26/trunk/perl/CRFPP.pm
+END
+Makefile.PL
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/2/trunk/perl/Makefile.PL
+END
+test.pl
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/2/trunk/perl/test.pl
+END
+Makefile.old
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2/trunk/perl/Makefile.old
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/2/trunk/perl/README
+END

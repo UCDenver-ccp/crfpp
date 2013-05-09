@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 27
+/svn/!svn/ver/26/trunk/ruby
+END
+test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/2/trunk/ruby/test.rb
+END
+CRFPP_wrap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/26/trunk/ruby/CRFPP_wrap.cpp
+END
+extconf.rb
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2/trunk/ruby/extconf.rb
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/2/trunk/ruby/README
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/2/trunk/ruby/Makefile
+END

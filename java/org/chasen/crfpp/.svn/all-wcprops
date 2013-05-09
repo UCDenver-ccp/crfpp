@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/26/trunk/java/org/chasen/crfpp
+END
+SWIGTYPE_p_float.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/2/trunk/java/org/chasen/crfpp/SWIGTYPE_p_float.java
+END
+Model.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/26/trunk/java/org/chasen/crfpp/Model.java
+END
+SWIGTYPE_p_int.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/java/org/chasen/crfpp/SWIGTYPE_p_int.java
+END
+SWIGTYPE_p_p_char.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/22/trunk/java/org/chasen/crfpp/SWIGTYPE_p_p_char.java
+END
+CRFPPConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/22/trunk/java/org/chasen/crfpp/CRFPPConstants.java
+END
+Tagger.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/22/trunk/java/org/chasen/crfpp/Tagger.java
+END
+CRFPP.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/22/trunk/java/org/chasen/crfpp/CRFPP.java
+END
+CRFPPJNI.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/26/trunk/java/org/chasen/crfpp/CRFPPJNI.java
+END

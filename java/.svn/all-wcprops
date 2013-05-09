@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 27
+/svn/!svn/ver/26/trunk/java
+END
+test.java
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/2/trunk/java/test.java
+END
+CRFPP_wrap.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/26/trunk/java/CRFPP_wrap.cxx
+END
+.am
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/!svn/ver/2/trunk/java/.am
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/2/trunk/java/README
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/2/trunk/java/Makefile
+END

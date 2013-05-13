@@ -426,28 +426,29 @@ bool TaggerImpl::initNbest() {
 }
 
 bool TaggerImpl::next() {
-  while (!agenda_->empty()) {
-    QueueElement *top = agenda_->top();
-    agenda_->pop();
-    Node *rnode = top->node;
+  if (agenda_.get() ) {
+    while (!agenda_->empty()) {
+      QueueElement *top = agenda_->top();
+      agenda_->pop();
+      Node *rnode = top->node;
 
-    if (rnode->x == 0) {
-      for (QueueElement *n = top; n; n = n->next) {
-        result_[n->node->x] = n->node->y;
+      if (rnode->x == 0) {
+        for (QueueElement *n = top; n; n = n->next) {
+          result_[n->node->x] = n->node->y;
+        }
+        cost_ = top->gx;
+        return true;
       }
-      cost_ = top->gx;
-      return true;
-    }
-
-    for (const_Path_iterator it = rnode->lpath.begin();
-         it != rnode->lpath.end(); ++it) {
-      QueueElement *n =nbest_freelist_->alloc();
-      n->node = (*it)->lnode;
-      n->gx   = -(*it)->lnode->cost     -(*it)->cost +  top->gx;
-      n->fx   = -(*it)->lnode->bestCost -(*it)->cost +  top->gx;
-      //          |              h(x)                 |  |  g(x)  |
-      n->next = top;
-      agenda_->push(n);
+      for (const_Path_iterator it = rnode->lpath.begin();
+        it != rnode->lpath.end(); ++it) {
+        QueueElement *n =nbest_freelist_->alloc();
+        n->node = (*it)->lnode;
+        n->gx   = -(*it)->lnode->cost     -(*it)->cost +  top->gx;
+        n->fx   = -(*it)->lnode->bestCost -(*it)->cost +  top->gx;
+        //          |              h(x)                 |  |  g(x)  |
+        n->next = top;
+        agenda_->push(n);
+      }
     }
   }
 

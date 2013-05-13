@@ -4,29 +4,26 @@ import java.lang.UnsatisfiedLinkError;
 public class test {
 
 public static void main(String[] argv) {
-	System.out.println("in main, starting");
   Tagger tagger = null;
   try {
-    //System.loadLibrary("CRFPP");
-    //System.loadLibrary("crfpp");
   	tagger = new Tagger("-m ../model -v 3 -n2");
 	}
 	catch (UnsatisfiedLinkError e) {
-		System.out.println("error: couldn't load tagger jni stuff: \n" + e);
+		System.out.println("error: creating new Tagger: \n" + e);
 		System.exit(-1);
 	}
 	catch (Exception x) {
 		System.out.println("exception:" + x);
+		System.exit(-1);
 	}
 	catch (Error x) {
 		System.out.println("error:" + x);
+		System.exit(-1);
 	}
 
-	System.out.println("tagger loaded");
   // clear internal context
   tagger.clear();
 
-	System.out.println("tagger cleared");
   // add context
   tagger.add("Confidence NN");
   tagger.add("in IN");
@@ -80,7 +77,12 @@ public static void main(String[] argv) {
 
   // when -n20 is specified, you can access nbest outputs
   System.out.println("nbest outputs:");
+  if (tagger == null) {
+	System.out.println("error, null tagger ");
+	System.exit(-1);
+  }
   for (int n = 0; n < 10; ++n) {
+	System.out.println("looping " + n);
     if (! tagger.next()) break;
     System.out.println("nbest n=" + n + "\tconditional prob=" + tagger.prob());
     // you can access any information using tagger.y()...
@@ -90,11 +92,9 @@ public static void main(String[] argv) {
 
 static {
   try {
-	System.out.println("in static before load");
-    System.loadLibrary("CRFPP");
-	System.out.println("in static after load");
+    System.loadLibrary("CRFPP_JNI");
   } catch (UnsatisfiedLinkError e) {
-    System.err.println("Test: Cannot load the example native code.\nMake sure your LD_LIBRARY_PATH contains \'.\'\n" + e);
+    System.err.println("Test (static block): Cannot load the example native code.\nMake sure your LD_LIBRARY_PATH contains \'.\'\n" + e);
     System.exit(1);
   }
 }

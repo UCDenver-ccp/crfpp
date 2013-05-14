@@ -17,7 +17,7 @@
 
 #include "crfpp.h"
 #include "scoped_ptr.h"
-
+#include <iostream>
 #if defined(_WIN32) && !defined(__CYGWIN__)
 namespace CRFPP {
 std::wstring Utf8ToWide(const std::string &input) {
